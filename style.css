@@ -1,0 +1,284 @@
+/* ESTILO GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #1a1a1a; /* Fundo escuro */
+    color: #ffffff; /* Texto branco */
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.flex {
+    display: flex;
+}
+
+.btn-contato button {
+    color: #1a1a1a; /* Texto preto */
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #00ff88; /* Verde neon */
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-contato button:hover {
+    transform: scale(1.10);
+    background-color: #00ccff; /* Azul neon ao passar o mouse */
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.5); /* Sombra neon */
+}
+
+h2.titulo {
+    font-size: 40px;
+    text-align: center;
+}
+
+h2.titulo span {
+    color: #00ff88;
+}
+
+/* ESTILO DO CABEÇALHO */
+header {
+    background-color: #1a1a1a; /* Fundo escuro */
+    padding: 20px 2%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #00ff88; /* Borda neon */
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    text-decoration: none;
+    color: #ffffff; /* Texto branco */
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+header nav ul li a:hover {
+    color: #00ff88; /* Verde neon ao passar o mouse */
+}
+
+/* ESTILO DA LOGO */
+.logo-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #00ff88; /* Verde neon */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.logo-text::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #00ccff; /* Azul neon */
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.logo-text:hover {
+    color: #00ccff; /* Azul neon ao passar o mouse */
+    transform: scale(1.05);
+}
+
+.logo-text:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* TOPO DO SITE */
+section.topo-do-site {
+    padding: 200px 4%;
+    position: relative;
+    overflow: hidden;
+}
+
+section.topo-do-site .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.topo-do-site h1 {
+    font-size: 60px;
+    line-height: 1.2;
+    color: #ffffff; /* Texto branco */
+}
+
+.topo-do-site h1 span {
+    color: #00ff88; /* Verde neon */
+}
+
+.topo-do-site .txt-topo-site p {
+    margin: 40px 0;
+    font-size: 18px;
+    color: #e0e0e0; /* Texto cinza claro */
+}
+
+/* Estilo da imagem */
+.img-topo-site {
+    position: relative;
+}
+
+.img-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.5); /* Sombra neon */
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.img-container:hover .profile-img {
+    transform: scale(1.1);
+}
+
+.img-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 5px solid #00ff88; /* Borda neon */
+    border-radius: 50%;
+    animation: rotateBorder 8s linear infinite;
+}
+
+@keyframes rotateBorder {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.img-shadow {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 20px;
+    background: rgba(0, 255, 136, 0.2); /* Sombra neon */
+    border-radius: 50%;
+    filter: blur(10px);
+}
+
+/* FOOTER */
+footer {
+    background-color: #1a1a1a; /* Fundo escuro */
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 100px;
+    border-top: 2px solid #00ff88; /* Borda neon */
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .social-links a {
+    color: #00ff88; /* Verde neon */
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: #00ccff; /* Azul neon ao passar o mouse */
+}
+
+footer p {
+    font-size: 14px;
+    color: #ffffff; /* Texto branco */
+}
+
+/* ESTILO BOX ESPECIALIDADES */
+section.especialidades {
+    padding: 40px 4%; /* Ajuste o padding para melhorar o espaçamento */
+}
+
+section.especialidades .flex {
+    gap: 20px;
+    justify-content: center; /* Centralizar as boxes */
+    align-items: stretch; /* Alinhar as boxes verticalmente */
+}
+
+.especialidades .especialidades-box {
+    padding: 40px;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+    margin-top: 40px;
+    flex: 1 1 45%; /* Ajuste para que as boxes tenham tamanhos iguais */
+    max-width: 45%; /* Limitar o tamanho máximo das boxes */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.especialidades .especialidades-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(0, 204, 255, 0.5); /* Sombra azul neon */
+    border-color: #00ccff; /* Borda azul neon ao passar o mouse */
+}
+
+.especialidades .especialidades-box i {
+    font-size: 70px;
+    color: #00ff88;
+}
+
+.especialidades .especialidades-box h3 {
+    color: #ffffff;
+    font-size: 25px;
+    margin: 15px 0;
+}
+
+.especialidades .especialidades-box p {
+    color: #e0e0e0; /* Texto cinza claro */
+    font-size: 16px;
+    line-height: 1.5;
+}

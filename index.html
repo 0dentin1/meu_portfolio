@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--GOOGLE FONTES-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!--FIM GOOGLE FONTES-->
+    <!--BOTSTRAP ICONS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--FIM BOTSTRAP ICONS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Meu Portfólio</title>
+</head>
+<body>
+    <header> <!--Cabeçalho-->
+        <div class="interface">
+            <div class="logo">
+                <a href="#" class="logo-text">Nicolas</a>
+            </div> <!--Fim logo-->
+
+            <nav class="menu-desktop">  <!--Menu Desktop-->
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">About me</a></li>
+                </ul>
+            </nav> <!--Fim Menu Desktop-->
+
+            <div class="btn-contato">
+                <a href="#">
+                    <button>Contact</button>
+                </a>
+            </div> <!--Fim botão de contato-->
+        </div> <!--Fim interface-->
+    </header>
+
+    <main>
+        <section class="topo-do-site">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-topo-site">
+                        <h1>WELCOME TO MY PORTFOLIO<span class="inverted-exclamation">!</span></h1>
+                        <p>Hey, I'm Nicolas Ritter Lima, a young developer passionate about creating awesome websites! Since 2024, I've been studying Systems Analysis and Development at PUCPR, and I'm already skilled in HTML, CSS, JavaScript, Python, and Java. Let's turn your ideas into reality!</p>
+
+                        <div class="btn-contato">
+                            <a href="#">
+                                <button>GET IN TOUCH</button>
+                            </a>                            
+                        </div>
+                    </div><!--Fim txt-topo-site-->
+
+                    <div class="img-topo-site">
+                        <div class="img-container">
+                            <img src="images/my_person.jpg" alt="my person" class="profile-img">
+                            <div class="img-border"></div>
+                            <div class="img-shadow"></div>
+                        </div>
+                    </div><!--img-topo-site-->
+                </div><!--Fim flex-->
+            </div><!--Fim Interface-->
+        </section><!--Fim Topo-do-site-->
+
+        <section class="especialidades">
+            <h2 class="titulo">MY <span>SPECIALTIES</span></h2>
+            <div class="flex">
+                <div class="especialidades-box">
+                    <i class="bi bi-filetype-java"></i>
+                    <h3>Back-end Development</h3>
+                    <p>I specialize in back-end development, with hands-on experience in Python and Java. I enjoy building robust and scalable server-side applications, and I'm always eager to learn more about new technologies in this field.</p>
+                </div><!--Fim especialidades-box-->
+
+                <div class="especialidades-box">
+                    <i class="bi bi-browser-chrome"></i>
+                    <h3>Front-end Development</h3>
+                    <p>I have experience in front-end development, creating responsive and user-friendly interfaces. This portfolio is one of my first projects, and I'm continuously improving my skills in HTML, CSS, and JavaScript.</p>
+                </div><!--Fim especialidades-box-->
+            </div>
+        </section><!--Fim especialidades-->
+    </main>
+
+    <footer>
+        <div class="interface"><!--Interface-->
+            <div class="footer-content"><!--footer-->
+                <p>&copy; 2024 Nicolas Ritter Lima. Todos os direitos reservados.</p>
+                <div class="social-links"><!--Links midia sociais-->
+                    <a href="https://github.com/0dentin1"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/nicolas-ritter-lima/"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" id="email-link" onclick="copyEmail(event)">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://wa.me/5544991118674"><i class="fab fa-whatsapp"></i></a>
+                </div><!--Fim Links midia sociais-->
+            </div><!--Fim footer-->
+        </div><!--Fim Interface-->
+    </footer>
+
+    <script>
+        function copyEmail(event) {
+            event.preventDefault(); // Impede o comportamento padrão do link
+            const email = "nicolasritterlima32@gmail.com";
+            navigator.clipboard.writeText(email).then(() => {
+                alert("E-mail copiado para a área de transferência: " + email);
+            }).catch(() => {
+                alert("Não foi possível copiar o e-mail. Por favor, copie manualmente: " + email);
+            });
+        }
+    </script>
+</body>
+</html>
