@@ -10,4 +10,4 @@ Clone este repositório e abra o arquivo "index.html" no seu navegador.
 
 ## Contato
 - Email: nicolasritterlima32@gmail.com
-- LinkedIn: Nicolas Ritter Lima(https://www.linkedin.com/in/nicolas-ritter-lima/)
+- LinkedIn: Nicolas Ritter Lima (https://www.linkedin.com/in/nicolas-ritter-lima/)
